@@ -32,7 +32,7 @@ const Products = () => {
           <h4 style={{ padding: "5px" }}>{product.name}</h4>
           <h4 style={{ padding: "5px" }}>{product.price}</h4>
           <h4 style={{ padding: "5px" }}>{product.stock}</h4>
-          <h4>{product.category[0] + " " + product.category[1]}</h4>
+          <h4>{product.category[0] + "  " + product.category[1]}</h4>
           <button onClick={() => handleAdd(product)} className="btn">
             ADD TO CART
           </button>

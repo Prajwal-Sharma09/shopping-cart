@@ -3,12 +3,24 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
-      <span>SHOPPING CART</span>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-around",
+      }}
+    >
+      <Link to="/" exact className="logo">
+        SHOPPING CART
+      </Link>
       <div>
-        <Link to="/">Home</Link>
-        <Link to="/cart">Cart</Link>
-        <span>CART ITEMS : 0</span>
+        <Link to="/" className="navLink">
+          Home
+        </Link>
+        <Link to="/cart" className="navLink">
+          Cart
+        </Link>
+        <span className="cartCount">CART ITEMS : 0</span>
       </div>
     </div>
   );

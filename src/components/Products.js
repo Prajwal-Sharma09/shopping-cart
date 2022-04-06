@@ -15,14 +15,18 @@ const Products = () => {
     fetchProducts();
   }, []);
   return (
-    <div>
+    <div className="productsWrapper">
       {products.map((product) => (
-        <div>
-          {" "}
-          <h5>{product.name}</h5>
-          <h5>{product.price}</h5>
-          <h5>{product.stock}</h5>
-          <h5>{product.category[0] + " " + product.category[1]}</h5>
+        <div className="card" key={product.id}>
+          <img
+            src="https://electronic-ecommerce.herokuapp.com/fantechHeadset.jpg"
+            alt=""
+          />
+          <h4 style={{ padding: "5px" }}>{product.name}</h4>
+          <h4 style={{ padding: "5px" }}>{product.price}</h4>
+          <h4 style={{ padding: "5px" }}>{product.stock}</h4>
+          <h4>{product.category[0] + " " + product.category[1]}</h4>
+          <button className="btn">ADD TO CART</button>
         </div>
       ))}
     </div>
